@@ -8,8 +8,8 @@ from discord.ext import commands
 from discord.ext.audiorec import NativeVoiceClient
 from creds import bot_secret
 
-intents = discord.Intents().all()
-client = commands.Bot(command_prefix="!", intents=intents)
+#intents = discord.Intents().all()
+client = commands.Bot(command_prefix="!")
 client.remove_command('help')
 
 
