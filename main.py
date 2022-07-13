@@ -51,7 +51,6 @@ async def stop(ctx: commands.Context):
 
     wav_bytes = await ctx.voice_client.stop_record()
 
-    # print(wav_bytes)
     name = str(random.randint(000000, 999999))
     with open(f'{name}.wav', 'wb') as f:
         f.write(wav_bytes)
