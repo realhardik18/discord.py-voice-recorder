@@ -1,15 +1,11 @@
-import os
-import cloudinary
-#from keep_alive import keep_alive
-import random
-import cloudinary.uploader
 import discord
 from discord.ext import commands
 from discord.ext.audiorec import NativeVoiceClient
-from creds import bot_secret
+from secrets import token
+import random
 
-#intents = discord.Intents().all()
-client = commands.Bot(command_prefix="!")
+intents = discord.Intents().all()
+client = commands.Bot(command_prefix="!", intents=intents)
 client.remove_command('help')
 
 
@@ -74,4 +70,4 @@ async def ensure_voice(ctx):
     elif ctx.voice_client.is_playing():
         ctx.voice_client.stop()
 
-client.run(bot_secret)
+client.run(token)
