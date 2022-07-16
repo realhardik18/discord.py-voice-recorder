@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
-from discord.ext.audiorec import NativeVoiceClient
-from secrets import token
+from discord.ext.audiorec import NativeVoiceClient  # important!
+from secrets import token  # bot's secret token
 import random
 
 intents = discord.Intents().all()
